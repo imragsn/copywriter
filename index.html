@@ -609,7 +609,7 @@
             <div class="quiz-head">
               <div>
                 <h2>Headline mana yang menang?</h2>
-                <p class="quiz-intro">Tiga ronde cepat. Di tiap ronde ada dua headline — pilih yang menurut lo paling kuat, terus lihat kenapa yang satu menang dan yang lain kalah.</p>
+                <p class="quiz-intro">Tiga ronde cepat. Di tiap ronde ada dua headline — pilih yang menurut kamu paling kuat, terus lihat kenapa yang satu menang dan yang lain kalah.</p>
               </div>
               <div class="quiz-status" aria-live="polite">
                 <span class="quiz-pill" id="quizRound">Ronde 1 / 3</span>
@@ -1268,17 +1268,17 @@
           body.innerHTML = "";
           var fin = el("div", "quiz-final");
           var big = el("p", "quiz-score-big");
-          big.appendChild(el("small", null, "Skor akhir lo"));
+          big.appendChild(el("small", null, "Skor akhir kamu"));
           big.appendChild(document.createTextNode(score + " / " + ROUNDS));
           fin.appendChild(big);
           var msgs = {
-            3: "Tiga dari tiga. Insting headline lo tajam — lo tau bedanya copy yang kerja dan copy yang cuma bunyi resmi.",
-            2: "Dua dari tiga. Insting lo udah di jalur yang benar — yang satu lagi memang sengaja dibikin mirip.",
+            3: "Tiga dari tiga. Insting headline kamu tajam — kamu tahu bedanya copy yang kerja dan copy yang cuma bunyi resmi.",
+            2: "Dua dari tiga. Insting kamu sudah di jalur yang benar — yang satu lagi memang sengaja dibikin mirip.",
             1: "Satu dari tiga. Wajar — yang menang di kuis ini memang sering bukan yang paling panjang atau paling resmi.",
             0: "Nol dari tiga — dan itu justru poinnya: headline yang menang jarang yang paling aman. Coba lagi, soalnya baru."
           };
           fin.appendChild(el("p", "quiz-final-msg", msgs[score]));
-          fin.appendChild(el("p", "quiz-cta-q", "Mau headline kayak gini buat brand lo?"));
+          fin.appendChild(el("p", "quiz-cta-q", "Mau headline kayak gini buat brand kamu?"));
           var actions = el("div", "quiz-final-actions");
           var cta = document.createElement("a");
           cta.className = "btn";
