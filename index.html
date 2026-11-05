@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Imra Gusnedi — Creative Copywriter. Every brand has a story — my job is to make sure people hear it. Social media copywriting, content planning, brand writing." />
+    <link rel="icon" href="data:," />
+    <title>Imra Gusnedi — Creative Copywriter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f4f1ea;
+        --surface: #ffffff;
+        --ink: #070504;
+        --ink-soft: #55504a;
+        --ink-faint: #8a8478;
+        --blue: #0115e1;
+        --blue-deep: #000fa8;
+        --lime: #b8e339;
+        --lav: #c1a8cd;
+        --cream-2: #eae5d8;
+        --line: rgba(7, 5, 4, 0.14);
+        --shadow: 0 20px 44px -20px rgba(7, 5, 4, 0.28);
+        --shadow-sm: 0 10px 26px -14px rgba(7, 5, 4, 0.22);
+        --radius: 26px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      ::selection { background: var(--lime); color: var(--ink); }
+      a { color: inherit; }
+      img, svg { display: block; }
+      .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+      .display { font-family: "Anton", "Plus Jakarta Sans", sans-serif; font-weight: 400; }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: var(--blue); color: #fff; text-decoration: none;
+        font-weight: 700; font-size: 0.95rem;
+        padding: 13px 26px; border-radius: 999px; border: 0; cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+      .btn:hover { background: var(--blue-deep); }
+      .btn:active { transform: scale(0.97); }
+      .btn.black { background: var(--ink); color: #fff; }
+      .btn.black:hover { background: #2a2521; }
+      .btn.lime { background: var(--lime); color: var(--ink); }
+      .btn.lime:hover { background: #a8d62e; }
+      .btn.light { background: #fff; color: var(--ink); }
+      .btn.light:hover { background: var(--cream-2); }
+
+      /* ---------- Nav : dark pill bar ---------- */
+      header { position: sticky; top: 14px; z-index: 60; margin-top: 14px; }
+      header .wrap { position: relative; }
+      .nav {
+        display: flex; align-items: center; gap: 14px;
+        background: var(--ink); color: #fff;
+        border-radius: 999px; padding: 10px 10px 10px 14px;
+        box-shadow: var(--shadow);
+      }
+      .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 800; font-size: 1.02rem; letter-spacing: -0.01em; color: #fff; white-space: nowrap; }
+      .brand-mark {
+        width: 38px; height: 38px; border-radius: 12px; flex: none;
+        background: var(--lime); color: var(--ink);
+        display: grid; place-items: center;
+        font-family: "Anton", sans-serif; font-size: 1.05rem;
+      }
+      .brand small { display: block; font-weight: 700; font-size: 0.62rem; color: var(--lav); letter-spacing: 0.16em; text-transform: uppercase; margin-top: 1px; }
+      .nav-links { display: flex; align-items: center; flex: 1; gap: 14px; }
+      .nav-pill {
+        margin: 0 auto; display: flex; align-items: center; gap: 2px;
+        background: rgba(255, 255, 255, 0.09); border: 1px solid rgba(255, 255, 255, 0.10);
+        border-radius: 999px; padding: 5px;
+      }
+      .nav-pill a {
+        text-decoration: none; font-weight: 600; font-size: 0.88rem; color: rgba(255, 255, 255, 0.82);
+        padding: 7px 14px; border-radius: 999px; white-space: nowrap;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+      .nav-pill a:hover { background: rgba(255, 255, 255, 0.14); color: #fff; }
+      .nav-cta { padding: 11px 22px; font-size: 0.9rem; flex: none; }
+      .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; color: #fff; margin-left: auto; }
+      .nav-toggle svg { width: 26px; height: 26px; }
+
+      /* ---------- Hero ---------- */
+      .hero { position: relative; padding: 58px 0 34px; }
+      .hero-grid { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 44px; align-items: center; }
+      h1 {
+        font-family: "Anton", "Plus Jakarta Sans", sans-serif; font-weight: 400;
+        font-size: clamp(3.1rem, 6.6vw, 5.5rem);
+        line-height: 0.98; letter-spacing: 0.002em;
+        margin: 0 0 20px; color: var(--ink);
+      }
+      h1 .hl { position: relative; white-space: nowrap; }
+      h1 .hl svg { position: absolute; left: 0; bottom: -3px; width: 100%; height: 13px; }
+      .hero-sub { font-size: 1.02rem; color: var(--ink-soft); max-width: 32rem; margin: 0 0 30px; }
+      .hero-sub strong { color: var(--ink); }
+      .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
+      .hero-meta { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 0.88rem; font-weight: 600; color: var(--ink-faint); }
+      .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+      .hero-meta svg { width: 16px; height: 16px; color: var(--ink); }
+
+      /* hero floating cards */
+      .hero-art { position: relative; min-height: 520px; }
+      .fc {
+        position: absolute; background: var(--surface); border: 1px solid var(--line);
+        border-radius: 24px; box-shadow: var(--shadow); padding: 22px;
+      }
+      .fc-label { display: flex; align-items: center; gap: 9px; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 10px; }
+      .fc-ico {
+        width: 42px; height: 42px; border-radius: 13px; flex: none;
+        display: grid; place-items: center;
+      }
+      .fc-ico svg { width: 20px; height: 20px; }
+      .fc-ico.lime { background: var(--lime); color: var(--ink); }
+      .fc-ico.black { background: var(--ink); color: #fff; }
+      .fc-ico.sm { width: 26px; height: 26px; border-radius: 9px; }
+      .fc-ico.sm svg { width: 14px; height: 14px; }
+      .fc-500 { top: 4px; left: 0; width: 58%; z-index: 2; }
+      .fc-500 .fc-num { font-family: "Anton", sans-serif; font-size: 3rem; line-height: 1; letter-spacing: 0.01em; }
+      .fc-500 .fc-title { font-weight: 800; font-size: 1.06rem; margin-top: 5px; }
+      .fc-500 p { margin: 2px 0 0; font-size: 0.88rem; color: var(--ink-faint); font-weight: 600; }
+      .fc-ring { top: 118px; right: 0; width: 45%; z-index: 3; text-align: center; padding: 24px 18px; }
+      .ring-wrap { position: relative; width: 118px; height: 118px; margin: 0 auto 12px; }
+      .ring-center {
+        position: absolute; inset: 0; display: grid; place-items: center;
+        font-family: "Anton", sans-serif; font-size: 1.65rem; letter-spacing: 0.01em;
+      }
+      .fc-ring .fc-title { font-weight: 800; font-size: 0.98rem; line-height: 1.35; }
+      .fc-ring p { margin: 3px 0 0; font-size: 0.82rem; color: var(--ink-faint); font-weight: 600; }
+      .fc-remote {
+        top: 216px; left: 5%; width: 53%; z-index: 3;
+        background: var(--lav); border-color: rgba(7, 5, 4, 0.10);
+        display: flex; align-items: center; gap: 13px; padding: 18px 20px;
+      }
+      .fc-remote b { display: block; font-size: 0.98rem; line-height: 1.3; }
+      .fc-remote span { display: block; font-size: 0.8rem; font-weight: 600; color: rgba(7, 5, 4, 0.62); margin-top: 2px; }
+      .fc-assets { bottom: 62px; right: 4%; width: 44%; z-index: 3; display: flex; align-items: center; gap: 13px; padding: 18px 20px; }
+      .fc-assets b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: 1.5rem; line-height: 1.1; }
+      .fc-assets span { display: block; font-size: 0.82rem; font-weight: 600; color: var(--ink-faint); }
+      .fc-motto { bottom: 0; left: 0; width: 52%; z-index: 2; transform: rotate(-2deg); padding: 20px 22px; }
+      .fc-motto p { margin: 0; font-weight: 700; font-size: 1rem; line-height: 1.45; letter-spacing: -0.01em; }
+      .fc-motto small { display: block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin-top: 8px; }
+      .float-a { animation: floaty 5.5s ease-in-out infinite; }
+      .float-b { animation: floaty 6.5s ease-in-out 0.8s infinite; }
+      @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+      .fc-motto.float-b { animation-name: floaty-tilt; }
+      @keyframes floaty-tilt { 0%, 100% { transform: rotate(-2deg) translateY(0); } 50% { transform: rotate(-2deg) translateY(-9px); } }
+
+      /* ---------- Client strip ---------- */
+      .strip { padding: 16px 0 6px; }
+      .strip p { text-align: center; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 14px; }
+      .strip-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 12px; }
+      .strip-row span {
+        font-weight: 800; font-size: 0.95rem; color: var(--ink);
+        background: var(--surface); border: 1px solid var(--line);
+        padding: 8px 18px; border-radius: 999px;
+      }
+
+      /* ---------- Highlight duo ---------- */
+      .duo-wrap { padding: 36px 0 4px; }
+      .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+      .duo-card { border-radius: 30px; padding: 38px 36px; display: flex; flex-direction: column; gap: 14px; min-height: 292px; }
+      .duo-lime { background: var(--lime); color: var(--ink); }
+      .duo-blue { background: var(--blue); color: #fff; }
+      .duo-tag {
+        align-self: flex-start; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+        padding: 6px 13px; border-radius: 999px; border: 1.5px solid currentColor;
+      }
+      .duo-card h3 { font-family: "Anton", sans-serif; font-weight: 400; font-size: clamp(1.75rem, 2.7vw, 2.35rem); line-height: 1.04; margin: 0; }
+      .duo-card p { margin: 0; font-size: 0.98rem; max-width: 26rem; }
+      .duo-lime p { color: rgba(7, 5, 4, 0.72); }
+      .duo-blue p { color: rgba(255, 255, 255, 0.84); }
+      .duo-card .btn { margin-top: auto; align-self: flex-start; }
+
+      /* ---------- Sections ---------- */
+      section { padding: 72px 0; }
+      .sec-head { max-width: 640px; margin-bottom: 40px; }
+      .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+      .kicker {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: var(--surface); border: 1.5px solid var(--ink); color: var(--ink);
+        font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;
+        padding: 7px 14px; border-radius: 999px; margin-bottom: 16px;
+      }
+      .kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); border: 1px solid rgba(7, 5, 4, 0.35); flex: none; }
+      .kicker.on-blue { background: var(--lime); }
+      h2 { font-family: "Anton", sans-serif; font-weight: 400; font-size: clamp(2rem, 3.8vw, 2.8rem); line-height: 1.06; letter-spacing: 0.003em; margin: 0 0 12px; }
+      .sec-head p { color: var(--ink-soft); margin: 0; font-size: 1.02rem; }
+
+      /* services */
+      .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .svc {
+        background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 28px 26px; transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .svc:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+      .svc .ico {
+        width: 50px; height: 50px; border-radius: 16px; background: var(--lime);
+        display: grid; place-items: center; color: var(--ink); margin-bottom: 18px;
+      }
+      .svc:nth-child(even) .ico { background: var(--lav); }
+      .svc .ico svg { width: 24px; height: 24px; }
+      .svc h3 { margin: 0 0 8px; font-size: 1.08rem; letter-spacing: -0.01em; }
+      .svc p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
+
+      /* stats : lime pills */
+      .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; padding: 6px 0; }
+      .stat { text-align: center; }
+      .stat .num {
+        display: inline-block; background: var(--lime); border: 1.5px solid var(--ink); color: var(--ink);
+        font-size: 1.95rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1;
+        padding: 13px 28px; border-radius: 999px;
+      }
+      .stat .num em { font-style: normal; }
+      .stat p { margin: 0 auto; font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); max-width: 13.5rem; }
+      .stat p::before { content: ""; display: block; width: 1.5px; height: 22px; background: var(--ink); margin: 0 auto 9px; opacity: 0.55; }
+
+      /* work */
+      .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+      .work {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 28px;
+        overflow: hidden; display: flex; flex-direction: column;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .work:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+      .work-banner {
+        height: 118px; position: relative; overflow: hidden; flex: none;
+        display: flex; align-items: flex-end; padding: 18px 24px;
+      }
+      .work-banner .b-name { font-family: "Anton", sans-serif; font-weight: 400; font-size: 1.45rem; letter-spacing: 0.01em; color: #fff; position: relative; z-index: 2; line-height: 1.15; }
+      .work-banner .b-year {
+        position: absolute; top: 14px; right: 18px; z-index: 2;
+        font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em;
+        background: rgba(255, 255, 255, 0.22); color: #fff; padding: 4px 10px; border-radius: 999px;
+      }
+      .bn-1 { background: var(--blue); }
+      .bn-2 { background: var(--ink); }
+      .bn-3 { background: var(--lime); }
+      .bn-4 { background: var(--lav); }
+      .bn-5 { background: var(--blue); }
+      .bn-6 { background: var(--ink); }
+      .bn-light .b-name { color: var(--ink); }
+      .bn-light .b-year { background: rgba(7, 5, 4, 0.12); color: var(--ink); }
+      .work-banner .deco { position: absolute; border-radius: 50%; border: 22px solid rgba(255, 255, 255, 0.14); }
+      .bn-light .deco { border-color: rgba(7, 5, 4, 0.07); }
+      .deco-a { width: 170px; height: 170px; right: -46px; bottom: -92px; }
+      .deco-b { width: 96px; height: 96px; right: 74px; top: -52px; border-width: 14px !important; }
+      .work-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+      .work-role { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue); }
+      .work-body p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+      .work-body p b { color: var(--ink); }
+      .tagline-quote { font-size: 1.22rem; font-weight: 800; color: var(--ink); line-height: 1.4; letter-spacing: -0.01em; }
+      .metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 6px; }
+      .metrics span {
+        background: var(--lime); color: var(--ink); font-weight: 700; font-size: 0.82rem;
+        padding: 7px 13px; border-radius: 999px;
+      }
+      .metrics span b { color: var(--ink); }
+
+      /* work thumbnails + project links */
+      .work-thumb { position: relative; height: 208px; flex: none; overflow: hidden; background: var(--cream-2); }
+      .work-thumb img { width: 100%; height: 100%; object-fit: cover; }
+      .work-thumb .b-year {
+        position: absolute; top: 14px; right: 18px; z-index: 2;
+        font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em;
+        background: rgba(7, 5, 4, 0.55); color: #fff; padding: 4px 10px; border-radius: 999px;
+      }
+      .thumb-logo { background: var(--ink); display: grid; place-items: center; padding: 26px 30px; }
+      .thumb-logo img { width: 100%; height: auto; max-height: 100%; object-fit: contain; }
+      .thumb-top img { object-position: center 18%; }
+      .work-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 2px; }
+      .work-links a {
+        display: inline-flex; align-items: center; gap: 6px;
+        font-size: 0.78rem; font-weight: 700; color: var(--ink); text-decoration: none;
+        border: 1.5px solid var(--ink); border-radius: 999px; padding: 6px 12px;
+        background: var(--surface); transition: background 0.2s ease;
+      }
+      .work-links a:hover { background: var(--lime); }
+      .work-links a svg { width: 11px; height: 11px; flex: none; }
+      .link-group-label {
+        width: 100%; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em;
+        text-transform: uppercase; color: var(--ink-faint); margin-top: 5px;
+      }
+      .link-group-label:first-child { margin-top: 0; }
+
+      /* featured work : full-width cards, thumb left / body right */
+      .work.featured { grid-column: 1 / -1; flex-direction: row; }
+      .work.featured .work-thumb { width: 42%; height: auto; min-height: 300px; }
+      .work.featured .work-body { padding: 30px 30px 28px; justify-content: center; }
+      .work.featured .work-body p { font-size: 1rem; }
+      .feat-badge {
+        position: absolute; top: 14px; left: 16px; z-index: 2;
+        background: var(--lime); color: var(--ink); border: 1.5px solid var(--ink);
+        font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+        padding: 5px 11px; border-radius: 999px;
+      }
+
+      /* about */
+      .about-photo {
+        margin: 0 auto 22px 0; max-width: 430px; border-radius: var(--radius); overflow: hidden;
+        border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+        position: relative; background: var(--ink);
+      }
+      .about-photo img { width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover; object-position: center 18%; }
+      .about-photo figcaption {
+        position: absolute; left: 16px; bottom: 16px;
+        background: var(--lime); color: var(--ink); border: 1.5px solid var(--ink);
+        font-size: 0.78rem; font-weight: 800; padding: 6px 14px; border-radius: 999px;
+      }
+      .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+      blockquote {
+        margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 32px 30px; box-shadow: var(--shadow-sm); position: relative;
+      }
+      blockquote .qmark { width: 34px; height: 34px; color: var(--blue); margin-bottom: 12px; }
+      blockquote p { font-size: 1.16rem; font-weight: 600; line-height: 1.55; margin: 0 0 14px; letter-spacing: -0.01em; }
+      blockquote footer { color: var(--ink-faint); font-size: 0.88rem; font-weight: 600; }
+      .about-copy p { color: var(--ink-soft); margin: 0 0 16px; }
+      .about-copy p b { color: var(--ink); }
+      .fact-list { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 12px; }
+      .fact-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.95rem; color: var(--ink-soft); }
+      .fact-list svg { width: 20px; height: 20px; color: var(--blue); flex: none; margin-top: 2px; }
+      .fact-list b { color: var(--ink); }
+
+      /* experience */
+      .exp-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+      .exp { display: grid; grid-template-columns: 190px 1fr; gap: 24px; padding: 24px 4px; border-bottom: 1px solid var(--line); align-items: baseline; }
+      .exp .when { font-size: 0.85rem; font-weight: 700; color: var(--blue); white-space: nowrap; }
+      .exp h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .exp h3 span { color: var(--ink-faint); font-weight: 600; }
+      .exp p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; max-width: 44rem; }
+      .exp .now {
+        display: inline-block; background: var(--lime); color: var(--ink); font-size: 0.68rem; font-weight: 800;
+        letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; margin-left: 8px; vertical-align: 2px;
+      }
+
+      /* contact */
+      .contact {
+        background: var(--blue); border-radius: 32px; color: #fff;
+        padding: 56px 48px; text-align: center; position: relative; overflow: hidden;
+      }
+      .contact::before {
+        content: ""; position: absolute; left: -80px; bottom: -110px; width: 280px; height: 280px;
+        border-radius: 50%; border: 38px solid rgba(184, 227, 57, 0.16);
+      }
+      .contact::after {
+        content: ""; position: absolute; right: -60px; top: -90px; width: 220px; height: 220px;
+        border-radius: 50%; background: rgba(255, 255, 255, 0.10);
+      }
+      .contact .kicker { position: relative; z-index: 1; }
+      .contact h2 { color: #fff; position: relative; z-index: 1; }
+      .contact p { color: rgba(255, 255, 255, 0.82); max-width: 32rem; margin: 0 auto 30px; position: relative; z-index: 1; }
+      .contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; position: relative; z-index: 1; }
+      .contact-direct { margin-top: 26px; font-size: 0.92rem; color: rgba(255, 255, 255, 0.78); position: relative; z-index: 1; }
+      .contact-direct a { color: #fff; font-weight: 700; text-decoration: none; border-bottom: 1px dashed rgba(255, 255, 255, 0.55); }
+      .contact-direct a:hover { border-bottom-style: solid; }
+
+      /* footer : white rounded card */
+      footer.site { padding: 6px 0 36px; }
+      .foot-card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 26px;
+        box-shadow: var(--shadow-sm); padding: 22px 26px;
+      }
+      .foot-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; color: var(--ink-soft); font-size: 0.88rem; font-weight: 600; }
+      .foot-row .socials { display: flex; gap: 10px; }
+      .foot-row .socials a {
+        width: 40px; height: 40px; border-radius: 50%; background: var(--surface); border: 1.5px solid var(--ink);
+        display: grid; place-items: center; color: var(--ink); text-decoration: none;
+        transition: background 0.2s ease;
+      }
+      .foot-row .socials a:hover { background: var(--lime); }
+      .foot-row .socials svg { width: 17px; height: 17px; }
+      .foot-credit { margin: 14px 0 0; text-align: center; font-size: 0.7rem; font-weight: 500; color: rgba(7, 5, 4, 0.36); }
+      .foot-credit a { color: inherit; text-decoration: none; }
+      .foot-credit a:hover { text-decoration: underline; }
+
+      /* reveal */
+      .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+      .reveal.in { opacity: 1; transform: none; }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 1060px) {
+        .nav-pill a { padding: 7px 10px; }
+        .brand small { display: none; }
+      }
+      @media (max-width: 960px) {
+        .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+        .hero-art { max-width: 560px; }
+        .svc-grid { grid-template-columns: repeat(2, 1fr); }
+        .stats { grid-template-columns: repeat(2, 1fr); }
+        .about-grid { grid-template-columns: 1fr; gap: 30px; }
+        .duo { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 840px) {
+        .nav-toggle { display: block; }
+        .nav-links {
+          display: none; position: absolute; top: calc(100% + 10px); left: 24px; right: 24px;
+          flex-direction: column; align-items: stretch; gap: 12px;
+          background: var(--ink); border-radius: 26px; padding: 16px;
+          box-shadow: var(--shadow);
+        }
+        .nav-links.open { display: flex; }
+        .nav-pill { margin: 0; flex-direction: column; align-items: stretch; border-radius: 18px; padding: 6px; }
+        .nav-pill a { padding: 11px 14px; border-radius: 12px; }
+        .nav-cta { justify-content: center; }
+      }
+      @media (max-width: 680px) {
+        section { padding: 54px 0; }
+        .hero { padding: 38px 0 22px; }
+        .work-grid { grid-template-columns: 1fr; }
+        .work.featured { flex-direction: column; }
+        .work.featured .work-thumb { width: 100%; height: 240px; min-height: 0; }
+        .work.featured .work-body { padding: 24px; }
+        .svc-grid { grid-template-columns: 1fr; }
+        .exp { grid-template-columns: 1fr; gap: 4px; }
+        .contact { padding: 44px 24px; }
+        .duo-card { padding: 30px 26px; min-height: 0; }
+        .hero-art { min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .fc { position: static; width: auto; }
+        .fc-500 { grid-column: 1 / -1; }
+        .fc-ring { grid-column: 1 / -1; }
+        .fc-motto { grid-column: 1 / -1; }
+        .foot-card { padding: 20px; }
+        .foot-row { justify-content: center; text-align: center; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .reveal { opacity: 1; transform: none; transition: none; }
+        .float-a, .float-b { animation: none; }
+        .svc, .work, .btn { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <nav class="nav" aria-label="Main">
+          <a class="brand" href="#top">
+            <span class="brand-mark">Im</span>
+            <span>Imra Gusnedi<small>Creative Copywriter</small></span>
+          </a>
+          <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+          <div class="nav-links" id="navLinks">
+            <span class="nav-pill">
+              <a href="#work">Work</a>
+              <a href="#services">Services</a>
+              <a href="#about">About</a>
+              <a href="#experience">Experience</a>
+              <a href="#contact">Contact</a>
+            </span>
+            <a class="btn lime nav-cta" href="mailto:gimra30@gmail.com">Let's Talk</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <div class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <h1>Words that work as hard as <span class="hl">visuals<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9C60 3 140 3 198 8" stroke="#b8e339" stroke-width="6" stroke-linecap="round" fill="none"/></svg></span> do.</h1>
+            <p class="hero-sub">I'm <strong>Imra Gusnedi</strong>, a creative copywriter who turns social media research and strategic planning into sharp copy that drives engagement — for tourism boards, banks, telco brands, and indie media.</p>
+            <div class="hero-cta">
+              <a class="btn" href="#work">View My Work
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn black" href="#contact">Get in touch</a>
+              <a class="btn lime" href="https://docs.google.com/document/d/1B0v3zb_w8qLvW4sOC0bk3bEzbihGkieePx40jFOCREc/edit?usp=sharing" target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                Download CV</a>
+            </div>
+            <div class="hero-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Jakarta, Indonesia</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg> 3+ yrs agency copywriter · a creative agency</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg> Communication / PR · Universitas Andalas</span>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <div class="fc fc-500 float-a">
+              <div class="fc-label"><span class="fc-ico lime sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span> Flagship campaign</div>
+              <div class="fc-num">500K+</div>
+              <div class="fc-title">Impressions</div>
+              <p>generated by flagship agency content</p>
+            </div>
+            <div class="fc fc-ring float-b">
+              <div class="ring-wrap">
+                <svg viewBox="0 0 120 120" width="118" height="118" aria-hidden="true">
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="#eae5d8" stroke-width="10"/>
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="#070504" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="137.2" transform="rotate(-90 60 60)"/>
+                </svg>
+                <span class="ring-center">58K</span>
+              </div>
+              <div class="fc-title">Top single content views</div>
+              <p>on one Bank Nagari social post</p>
+            </div>
+            <div class="fc fc-remote">
+              <span class="fc-ico black"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+              <div><b>Open to Remote Roles</b><span>Jakarta, Indonesia</span></div>
+            </div>
+            <div class="fc fc-assets float-a">
+              <span class="fc-ico lime"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>
+              <div><b>20+</b><span>assets / month</span></div>
+            </div>
+            <div class="fc fc-motto float-b">
+              <p>"Every brand has a story — my job is to make sure people hear it."</p>
+              <small>— the working motto</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLIENT STRIP -->
+      <div class="strip">
+        <div class="wrap">
+          <p>Brands &amp; institutions I've written for</p>
+          <div class="strip-row">
+            <span>Disporapar Jawa Tengah</span>
+            <span>Bank Nagari</span>
+            <span>by.U · OLDO</span>
+            <span>Syne</span>
+            <span>Minang Podcast</span>
+            <span>House of Musi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- HIGHLIGHT DUO -->
+      <div class="wrap duo-wrap">
+        <div class="duo">
+          <article class="duo-card duo-lime">
+            <span class="duo-tag">What I do</span>
+            <h3>Services, from first scroll to final story</h3>
+            <p>Research-backed copy for brands that live on social — plus the planning that makes every post earn its place.</p>
+            <a class="btn black" href="#services">See services</a>
+          </article>
+          <article class="duo-card duo-blue">
+            <span class="duo-tag">Selected work</span>
+            <h3>Campaigns &amp; content that performed</h3>
+            <p>Seven projects from agency, brand, and media work — 2021 to 2025.</p>
+            <a class="btn black" href="#work">See selected work</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="wrap reveal">
+        <div class="stats">
+          <div class="stat"><div class="num"><span data-count="500">0</span><em>K+</em></div><p>impressions generated by flagship agency content</p></div>
+          <div class="stat"><div class="num"><span data-count="58">0</span><em>K</em></div><p>views on a single Bank Nagari social post</p></div>
+          <div class="stat"><div class="num"><span data-count="20">0</span><em>+</em></div><p>content assets delivered every month at OLDO</p></div>
+          <div class="stat"><div class="num"><span data-count="5">0</span><em>+</em></div><p>monthly retainer clients handled at a creative agency</p></div>
+        </div>
+      </div>
+
+      <!-- WORK -->
+      <section id="work">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="kicker">Selected Work</span>
+            <h2>Campaigns &amp; content that performed</h2>
+            <p>Seven projects from agency, brand, and media work — 2021 to 2025.</p>
+          </div>
+          <div class="work-grid">
+            <article class="work featured reveal">
+              <div class="work-thumb">
+                <span class="feat-badge">Featured</span><span class="b-year">2024 – 2025</span>
+                <img loading="lazy" src="images/byu-premier-trip.jpg" alt="by.U England Premier Trip stadium banner for the Nonton Bola #GakGituGituAja campaign, with brand ambassadors Yura Yunita and Donne" />
+              </div>
+              <div class="work-body">
+                <div class="work-role">by.U — Nonton Bola #GakGituGituAja · Digital Copywriter, OLDO</div>
+                <p>In-house copy for telco brand <b>by.U</b> at OLDO Digital: short-form video scripts, marketing copy, and campaign messaging — headlined by <b>"Nonton Bola #GakGituGituAja"</b>, the England Premier Trip campaign, fronted by brand ambassadors <b>Yura Yunita</b> and <b>Donne</b>. Social listening fed a steady stream of reactive content around the football season.</p>
+                <div class="metrics"><span><b>20+</b> assets every month</span><span>Oct 2024 – Jun 2025</span></div>
+                <div class="work-links">
+                  <a href="https://www.byu.id/id/campaign/englandtrip" target="_blank" rel="noopener">Campaign Page <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/DHV3NfNPGHS/?hl=en" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/DEj_jfmSI75/?hl=en" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/DDJ8_VzvUqt/?hl=en" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/DDEqH3CPmoR/?hl=en" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work featured reveal">
+              <div class="work-thumb thumb-top">
+                <span class="feat-badge">Featured</span><span class="b-year">2025</span>
+                <img loading="lazy" src="images/byu-boooleh-tau.png" alt="by.U Boooleh TaU campaign key visual — two friends taking a selfie with the line 'Teman lama, akrabnya tetap sama'" />
+              </div>
+              <div class="work-body">
+                <div class="work-role">by.U — Boooleh TaU · Digital Copywriter, OLDO</div>
+                <p>A <b>by.U</b> campaign built on a simple, very Gen Z insight: plenty of things people assume are unusual or "not allowed" turn out to be completely fine — moments close to everyday Gen Z life, tapped into the Ramadan and Lebaran season. I worked on Boooleh TaU as <b>part of the creative team at OLDO, alongside several other copywriters</b> — a team effort, not a solo piece.</p>
+                <div class="work-links">
+                  <a href="https://www.instagram.com/reel/DHa57MZv89Y/?hl=en" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/DHYRqaLPUMA/?hl=en" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/DHVJUqOSsjw/?hl=en" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/DHSaolPvCXM/?hl=en" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/DHI9RO2Bjp1/?hl=en" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work reveal">
+              <div class="work-thumb"><span class="b-year">2024</span><img loading="lazy" src="images/disporapar-prambanan.jpg" alt="Prambanan temple in Central Java, under a bright blue sky" /></div>
+              <div class="work-body">
+                <div class="work-role">Disporapar Jawa Tengah · Social Media Copywriting · Content Ideation</div>
+                <p>Tourism campaign <b>#JelajahJatengSekarang</b> built around mascot <b>"Pody"</b>, introducing Central Java to Gen Z — from Benteng Pendem and Pantai Teluk Penyu's seafood scene to Festival Gunung Slamet, the Perang Tomat tradition, and Desa Wisata Lembah Asri. Produced under a creative agency.</p>
+                <div class="metrics"><span><b>Gen Z</b> tourism audience</span><span>Animated campaign series</span></div>
+                <div class="work-links">
+                  <a href="https://drive.google.com/file/d/1Q2pQOqoL6iqtBykUoBCCaVaOrv7aaRl9/view?resourcekey&usp=slides_web" target="_blank" rel="noopener">Drive File <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://drive.google.com/file/d/1tb8su_-sFYunVqdxMUi95zyzz4RYtEv6/view?resourcekey" target="_blank" rel="noopener">Drive File <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work reveal">
+              <div class="work-thumb"><span class="b-year">2024</span><img loading="lazy" src="images/bank-nagari-ollin.png" alt="Grid of Bank Nagari Ollin app social media designs, including the Move On ke Ollin bonus artwork" /></div>
+              <div class="work-body">
+                <div class="work-role">Bank Nagari · Social Media Copywriting</div>
+                <p>Instagram awareness for a regional bank, aimed at Gen Z: the <b>#MoveonkeOLLIN</b> push for the Ollin by Nagari app, QRIS-scam awareness content, and a Before–After–Bridge service story that outperformed the account's usual reach.</p>
+                <div class="metrics"><span><b>58K</b> views · top post</span><span><b>779</b> likes · <b>83</b> comments</span><span><b>445</b> likes · BAB content</span></div>
+                <div class="work-links">
+                  <a href="https://www.instagram.com/reel/C6xajMKNNbS/" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://drive.google.com/file/d/1QjOboUK2kljQoGneBiXiOEQeXvm_qtNB/view" target="_blank" rel="noopener">Drive File <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work reveal">
+              <div class="work-thumb"><span class="b-year">2022 – 2024</span><img loading="lazy" src="images/syne-logo.png" alt="Syne logo — black wordmark on a lime-green background" /></div>
+              <div class="work-body">
+                <div class="work-role">Social Media Copywriting · Content Writer</div>
+                <p>Copy and articles for an alternative creative-industry media in West Sumatra: the <b>Syne × Grab Padang</b> promo, <b>Soundroom Tour 2023</b> across 14 cities, media partnership for <b>Swarnaland Fest 2023</b>, and website articles on wethesyne.com.</p>
+                <div class="metrics"><span><b>14</b> cities · Soundroom Tour</span><span>Website articles</span></div>
+                <div class="work-links">
+                  <span class="link-group-label">Soundroom Tour</span>
+                  <a href="https://www.instagram.com/reel/C1mDmMhRvsK/" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/C1BmENQRpE1/" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/reel/C1rEBWoxcX_/" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <span class="link-group-label">Swarnaland Fest</span>
+                  <a href="https://www.instagram.com/p/C35LFDvRBM3/?hl=en&img_index=1" target="_blank" rel="noopener">Instagram Post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/p/C3SBiGJRS85/?hl=en&img_index=1" target="_blank" rel="noopener">Instagram Post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/p/C16MvPLRhjY/?hl=en&img_index=1" target="_blank" rel="noopener">Instagram Post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work reveal">
+              <div class="work-thumb"><span class="b-year">2021</span><img loading="lazy" src="images/minang-podcast.jpg" alt="Minang Podcast branding panels featuring podcaster Audy Joinaldy and the line 'Setiap Kita adalah Tokoh'" /></div>
+              <div class="work-body">
+                <div class="work-role">Branding · Brand Writer</div>
+                <p>Brand writing for Minang Podcast by Audy Joinaldy, a podcast speaking to Gen Z and Millennials — including the tagline that still anchors the show:</p>
+                <p class="tagline-quote">"Setiap Kita Adalah Tokoh, Setiap Cerita Menjadi Contoh."</p>
+                <div class="metrics"><span>Tagline &amp; brand voice</span></div>
+                <div class="work-links">
+                  <a href="https://www.youtube.com/watch?v=9CL84gX8iLA&t=3s" target="_blank" rel="noopener">YouTube <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work reveal">
+              <div class="work-thumb"><span class="b-year">2023 – 2024</span><img loading="lazy" src="images/house-of-musi-logo.png" alt="House of Musi logo — white smiling coffee-cup mark on an orange background" /></div>
+              <div class="work-body">
+                <div class="work-role">Social Media Copywriting · Content Ideation</div>
+                <p>Social content for a cozy Padang coffee shop with a Gen Z crowd — warm, scroll-stopping posts that turned a neighborhood café into a feed regular.</p>
+                <div class="metrics"><span><b>75K</b> views</span><span><b>1,517</b> likes · top content</span></div>
+                <div class="work-links">
+                  <a href="https://www.instagram.com/reel/CzfuLr6psoJ/" target="_blank" rel="noopener">Instagram Reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/p/C3Uau-zJocv/" target="_blank" rel="noopener">Instagram Post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                  <a href="https://www.instagram.com/p/C8WCC6IJcnS/" target="_blank" rel="noopener">Instagram Post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="kicker">Services</span>
+            <h2>Services, from first scroll to final story</h2>
+            <p>Research-backed copy for brands that live on social — plus the planning that makes every post earn its place.</p>
+          </div>
+          <div class="svc-grid">
+            <article class="svc reveal">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.6A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 10.5h7M8.5 13.5h4"/></svg></div>
+              <h3>Social Media Copywriting</h3>
+              <p>Captions, campaign lines, and short-form scripts written for the feed — hooks first, brand voice always.</p>
+            </article>
+            <article class="svc reveal">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m10 15 2 2 4-4"/></svg></div>
+              <h3>Content Ideation &amp; Planning</h3>
+              <p>Editorial calendars and campaign concepts that keep a brand consistent — 50+ pieces a month at peak pace.</p>
+            </article>
+            <article class="svc reveal">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.5" fill="currentColor"/></svg></div>
+              <h3>Corporate Branding &amp; Brand Writing</h3>
+              <p>Taglines, brand narratives, and corporate copy that give institutions a voice people remember.</p>
+            </article>
+            <article class="svc reveal">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6"/><path d="M9 13h6M9 17h4"/></svg></div>
+              <h3>Website Articles</h3>
+              <p>Long-form articles that read like stories, not filler — written for media and brand websites.</p>
+            </article>
+            <article class="svc reveal">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg></div>
+              <h3>Social Media Research &amp; Social Listening</h3>
+              <p>Social listening and audience research turned into reactive content that rides the moment, on brand.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" style="padding-top: 8px;">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="kicker">About</span>
+            <h2>A copywriter who writes things down — on purpose</h2>
+          </div>
+          <div class="about-grid">
+            <div class="reveal">
+              <figure class="about-photo">
+                <img loading="lazy" src="images/imra-portrait.jpg" alt="Portrait of Imra Gusnedi, lit warmly against a dark studio backdrop" />
+                <figcaption>Imra Gusnedi · Jakarta</figcaption>
+              </figure>
+              <blockquote>
+                <svg class="qmark" viewBox="0 0 24 24" fill="currentColor"><path d="M10 8H6a4 4 0 0 0-4 4v6h7v-7H6.5A2.5 2.5 0 0 1 9 8.6V8h1Zm12 0h-4a4 4 0 0 0-4 4v6h7v-7h-2.5A2.5 2.5 0 0 1 21 8.6V8h1Z" transform="translate(0,-1)"/></svg>
+                <p>"I've come to realize that people's memories are limited. That's why I love writing things down. Yup, I'm really into writing and storytelling."</p>
+                <footer>— Imra Gusnedi, on why he writes</footer>
+              </blockquote>
+            </div>
+            <div class="about-copy reveal">
+              <p>I'm a <b>creative copywriter focused on brand marketing</b>. My process starts before the blank page: social media research and strategic planning first, then copy that's sharp enough to drive engagement — and human enough to be remembered.</p>
+              <p>After 3+ yrs at <b>a creative agency</b> and a run as digital copywriter for telco brand by.U at OLDO, I now also bring that craft to public communication.</p>
+              <ul class="fact-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg><span><b>Currently:</b> Pranata Humas Ahli Pertama — Kementerian Perhubungan</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg><span><b>Education:</b> S1 Communication (Public Relations), Universitas Andalas · GPA 3.93/4.00, Cum Laude</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><span><b>Top skills:</b> Promotional Copy · Corporate Branding · Media Relations</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Based in Jakarta</b> — open to remote roles</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" style="padding-top: 8px;">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="kicker">Experience</span>
+            <h2>Where the words have worked</h2>
+          </div>
+          <div class="exp-list reveal">
+            <div class="exp">
+              <div class="when">Present</div>
+              <div>
+                <h3>Pranata Humas Ahli Pertama <span>· Kementerian Perhubungan</span><span class="now">Current role</span></h3>
+                <p>Public relations officer at the Ministry of Transportation — applying brand and content craft to government communication.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">Oct 2024 – Jun 2025</div>
+              <div>
+                <h3>Digital Copywriter <span>· OLDO Digital (by.U)</span></h3>
+                <p>Copy for telco brand by.U — 20+ content assets a month across short-form video scripts, marketing copy, and campaign messaging.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">2022 – 2024</div>
+              <div>
+                <h3>Copywriter <span>· a creative agency</span></h3>
+                <p>Agency copywriter for 5+ monthly retainer clients — tourism, banking, F&amp;B, and media — with flagship content passing 500K impressions.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">2022 – 2024</div>
+              <div>
+                <h3>Content Writer <span>· Syne</span></h3>
+                <p>Social copy and website articles for a West Sumatran creative-industry media — event promos, tour coverage, and festival partnerships.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">2021</div>
+              <div>
+                <h3>Brand Writer <span>· Minang Podcast</span></h3>
+                <p>Branding and the show's defining tagline for a podcast aimed at Gen Z and Millennial listeners.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <div class="wrap" style="padding-bottom: 76px;">
+        <div class="contact reveal" id="contact">
+          <span class="kicker on-blue">Contact</span>
+          <h2>Have a brand that needs better words?</h2>
+          <p>I'm open to remote copywriting roles and freelance projects — social media, campaigns, brand writing. Tell me what you're building.</p>
+          <div class="contact-actions">
+            <a class="btn light" href="mailto:gimra30@gmail.com">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              gimra30@gmail.com</a>
+            <a class="btn black" href="https://www.linkedin.com/in/imra/" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z"/></svg>
+              LinkedIn</a>
+            <a class="btn lime" href="https://docs.google.com/document/d/1B0v3zb_w8qLvW4sOC0bk3bEzbihGkieePx40jFOCREc/edit?usp=sharing" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+              Download CV</a>
+          </div>
+          <div class="contact-direct">Prefer email? <a href="mailto:gimra30@gmail.com">gimra30@gmail.com</a></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-card">
+          <div class="foot-row">
+            <span>© 2026 Imra Gusnedi — Creative Copywriter, Jakarta.</span>
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/imra/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z"/></svg></a>
+              <a href="mailto:gimra30@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+            </div>
+          </div>
+          <p class="foot-credit">Design inspired by <a href="https://dribbble.com/shots/27612754-Vitalis-Accessible-Healthcare-Landing-Page" target="_blank" rel="noopener">Vitalis on Dribbble</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var toggle = document.getElementById("navToggle");
+        var links = document.getElementById("navLinks");
+        toggle.addEventListener("click", function () {
+          var open = links.classList.toggle("open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        links.addEventListener("click", function (e) {
+          if (e.target.closest("a")) {
+            links.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        // Reveal on scroll
+        var revealEls = document.querySelectorAll(".reveal");
+        if (reduceMotion || !("IntersectionObserver" in window)) {
+          revealEls.forEach(function (el) { el.classList.add("in"); });
+        } else {
+          var ro = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) { en.target.classList.add("in"); ro.unobserve(en.target); }
+            });
+          }, { threshold: 0.12 });
+          revealEls.forEach(function (el) { ro.observe(el); });
+        }
+
+        // Animated counters
+        function animateCount(el) {
+          var target = parseInt(el.getAttribute("data-count"), 10);
+          if (reduceMotion) { el.textContent = target; return; }
+          var start = null, dur = 1400;
+          function step(ts) {
+            if (!start) start = ts;
+            var p = Math.min((ts - start) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(target * eased);
+            if (p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
+        var counters = document.querySelectorAll("[data-count]");
+        if ("IntersectionObserver" in window) {
+          var co = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) { animateCount(en.target); co.unobserve(en.target); }
+            });
+          }, { threshold: 0.5 });
+          counters.forEach(function (el) { co.observe(el); });
+        } else {
+          counters.forEach(animateCount);
+        }
+      })();
+    </script>
+  </body>
+</html>
