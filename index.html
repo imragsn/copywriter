@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
     <meta name="description" content="Imra Gusnedi — Creative Copywriter. Every brand has a story — my job is to make sure people hear it. Social media copywriting, content planning, brand writing." />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <title>Imra Gusnedi — Creative Copywriter Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -158,6 +158,76 @@
       @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
       .fc-motto.float-b { animation-name: floaty-tilt; }
       @keyframes floaty-tilt { 0%, 100% { transform: rotate(-2deg) translateY(0); } 50% { transform: rotate(-2deg) translateY(-9px); } }
+
+      /* ---------- Quiz : Headline mana yang menang? ---------- */
+      .quiz-wrap { padding: 30px 0 6px; }
+      .quiz-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 16px; }
+      .quiz-top .kicker { margin-bottom: 0; }
+      .quiz-skip {
+        font-size: 0.85rem; font-weight: 700; color: var(--ink-soft); text-decoration: none;
+        border-bottom: 1.5px dashed var(--ink-faint); padding-bottom: 1px; white-space: nowrap;
+        transition: color 0.2s ease, border-color 0.2s ease;
+      }
+      .quiz-skip:hover { color: var(--blue); border-bottom-color: var(--blue); }
+      .quiz-card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 30px;
+        box-shadow: var(--shadow-sm); padding: 34px 36px 36px;
+      }
+      .quiz-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 22px; }
+      .quiz-head h2 { margin: 0 0 6px; }
+      .quiz-intro { margin: 0; color: var(--ink-soft); font-size: 0.98rem; max-width: 30rem; }
+      .quiz-status { display: flex; gap: 8px; flex: none; padding-bottom: 4px; }
+      .quiz-pill {
+        font-size: 0.8rem; font-weight: 800; letter-spacing: 0.01em;
+        padding: 7px 14px; border-radius: 999px; border: 1.5px solid var(--ink); background: var(--bg); color: var(--ink);
+      }
+      .quiz-pill.score { background: var(--lime); }
+      .quiz-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 22px 0 14px; }
+      .quiz-cat { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: var(--blue); }
+      .quiz-src {
+        font-size: 0.68rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase;
+        padding: 4px 10px; border-radius: 999px; background: var(--cream-2); color: var(--ink-soft);
+      }
+      .quiz-src.asli { background: var(--ink); color: var(--lime); }
+      .quiz-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .qopt {
+        font: inherit; text-align: left; width: 100%; cursor: pointer;
+        background: #fff; border: 2px solid var(--line); border-radius: 22px; padding: 22px;
+        display: flex; gap: 14px; align-items: flex-start; color: var(--ink);
+        transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+      }
+      .qopt:hover:not(:disabled), .qopt:focus-visible:not(:disabled) { border-color: var(--blue); transform: translateY(-2px); }
+      .qopt:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+      .qopt:disabled { cursor: default; }
+      .qletter {
+        width: 34px; height: 34px; flex: none; border-radius: 50%; border: 2px solid var(--ink);
+        display: grid; place-items: center; font-weight: 800; font-size: 0.95rem; background: #fff;
+      }
+      .qtext { font-size: 1.07rem; font-weight: 700; line-height: 1.45; letter-spacing: -0.01em; padding-top: 4px; overflow-wrap: break-word; min-width: 0; }
+      .qopt.correct { background: var(--lime); border-color: var(--ink); }
+      .qopt.correct .qletter { background: var(--ink); color: var(--lime); }
+      .qopt.wrong { background: var(--cream-2); border-color: var(--ink); }
+      .qopt.dim { opacity: 0.5; }
+      .quiz-why { margin-top: 18px; background: var(--bg); border: 1px solid var(--line); border-radius: 20px; padding: 20px 22px; }
+      .quiz-verdict { font-weight: 800; font-size: 1.02rem; margin: 0 0 6px; }
+      .quiz-verdict.ok { color: var(--blue-deep); }
+      .quiz-why p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+      .quiz-next { margin-top: 18px; }
+      .quiz-final { text-align: center; padding: 14px 0 6px; }
+      .quiz-score-big { font-family: "Anton", sans-serif; font-size: clamp(3rem, 8vw, 4.2rem); line-height: 1; margin: 0 0 8px; }
+      .quiz-score-big small { font-size: 0.32em; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 10px; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; }
+      .quiz-final-msg { margin: 0 auto 22px; color: var(--ink-soft); max-width: 26rem; }
+      .quiz-cta-q { font-family: "Anton", sans-serif; font-weight: 400; font-size: clamp(1.4rem, 3vw, 1.8rem); line-height: 1.15; margin: 0 0 18px; }
+      .quiz-final-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .quiz-disclaimer { text-align: center; font-size: 0.78rem; color: var(--ink-faint); margin: 14px auto 0; max-width: 36rem; }
+      @media (max-width: 680px) {
+        .quiz-card { padding: 26px 22px 28px; }
+        .quiz-opts { grid-template-columns: 1fr; }
+        .quiz-status { padding-bottom: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .qopt { transition: none; }
+      }
 
       /* ---------- Client strip ---------- */
       .strip { padding: 16px 0 6px; }
@@ -523,6 +593,32 @@
               <small>— the working motto</small>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- QUIZ : HEADLINE MANA YANG MENANG? -->
+      <div class="quiz-wrap" id="quiz">
+        <div class="wrap">
+          <div class="quiz-top">
+            <span class="kicker">Interactive</span>
+            <a class="quiz-skip" href="#work">Skip to my work
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="display:inline; vertical-align:-1px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="quiz-card">
+            <div class="quiz-head">
+              <div>
+                <h2>Headline mana yang menang?</h2>
+                <p class="quiz-intro">Tiga ronde cepat. Di tiap ronde ada dua headline — pilih yang menurut lo paling kuat, terus lihat kenapa yang satu menang dan yang lain kalah.</p>
+              </div>
+              <div class="quiz-status" aria-live="polite">
+                <span class="quiz-pill" id="quizRound">Ronde 1 / 3</span>
+                <span class="quiz-pill score" id="quizScore">Skor 0</span>
+              </div>
+            </div>
+            <div id="quizBody"></div>
+          </div>
+          <p class="quiz-disclaimer">Not every winning line here is mine — some are the brands' own words from campaigns I worked on.</p>
         </div>
       </div>
 
@@ -900,6 +996,313 @@
         } else {
           counters.forEach(animateCount);
         }
+      })();
+    </script>
+
+    <script>
+      // ---- Quiz: "Headline mana yang menang?" — bank soal final (34 soal) ----
+      (function () {
+        var BANK = [
+          { id: 1, cat: "Baris Campaign Asli · by.U (Telco)", asli: true, benar: "B",
+            a: "Nikmati Kesempatan Menonton Pertandingan Sepak Bola Secara Langsung di Inggris Bersama Kami",
+            b: "Nonton bola langsung di Inggris? #GakGituGituAja",
+            why: "Versi ini jauh lebih singkat dan ngobrol, bukan ngumumin. Hashtag-nya bikin penasaran — orang berhenti karena pengen tau maksudnya. Ini baris asli campaign England Premier Trip by.U bareng Brand Ambassador Yura Yunita dan Donne." },
+          { id: 2, cat: "Baris Campaign Asli · Minang Podcast", asli: true, benar: "A",
+            a: "Setiap Kita Adalah Tokoh, Setiap Cerita Menjadi Contoh",
+            b: "Podcast yang Menghadirkan Cerita-Cerita Inspiratif dari Berbagai Narasumber",
+            why: "Versi lemahnya cuma deskripsi. Versi ini adalah janji — pendengar diposisikan sebagai tokoh, bukan penonton. Ritme paralelnya bikin tagline asli Minang Podcast ini nempel di kepala." },
+          { id: 3, cat: "Baris Campaign Asli · Disporapar Jawa Tengah (Hashtag)", asli: true, benar: "B",
+            a: "#MariBerkunjungKeBerbagaiDestinasiWisataDiJawaTengah",
+            b: "#JelajahJatengSekarang",
+            why: "Hashtag yang bagus harus bisa diingat dalam dua detik. Versi ini pendek, pakai kata kerja aktif, dan ada urgensi di kata “Sekarang”. Ini hashtag asli Disporapar Jawa Tengah." },
+          { id: 4, cat: "Baris Campaign Asli · Bank Nagari (Hashtag)", asli: true, benar: "A",
+            a: "#MoveonkeOLLIN",
+            b: "#AyoSegeraBeralihMenggunakanAplikasiOllinBankNagari",
+            why: "Versi ini menang karena mainin frasa yang udah akrab — “move on” — lalu langsung nyebut produknya, Ollin. Sekali baca, langsung ngerti dan langsung ingat. Hashtag asli Bank Nagari." },
+          { id: 5, cat: "Baris Campaign Asli · Bank Nagari (Keamanan)", asli: true, benar: "A",
+            a: "Jangan Terkecoh! Waspada scan QRIS Palsu!",
+            b: "Pengumuman Penting: Harap Waspada Terhadap Modus Penipuan Berupa QRIS Palsu yang Sedang Marak Terjadi",
+            why: "Buat konten keamanan, peringatan harus mukul dari kata pertama. Versi ini langsung melarang dan menunjuk ancamannya, tanpa basa-basi korporat. Ini headline asli Bank Nagari." },
+          { id: 6, cat: "Baris Campaign Asli · Bank Nagari (QRIS)", asli: true, benar: "B",
+            a: "Gunakan QRIS untuk Transaksi Pembayaran yang Mudah, Cepat, dan Efisien",
+            b: "Pakai QRIS Anti Repot!!",
+            why: "Orang nggak tertarik sama kata “efisien”, orang tertarik sama “anti repot” — itu bahasa pain point sehari-hari. Konten QRIS Bank Nagari ini dapat 232 likes dan 40 shares." },
+          { id: 7, cat: "Baris Campaign Asli · by.U (Boooleh TaU)", asli: true, benar: "B",
+            a: "Ternyata Beberapa Hal yang Kamu Kira Tidak Boleh, Sebenarnya Boleh Dilakukan",
+            b: "Boooleh TaU",
+            why: "Satu frasa langsung jadi nama campaign. Ejaannya yang dimainin bikin orang penasaran: “apa aja sih yang boooleh?” Konsep asli by.U ini menangkap hal yang dikira tak lazim ternyata boleh — dekat sama hidup Gen Z dan tap-in ke momen Ramadan/Lebaran. Dikerjakan tim kreatif, bukan solo." },
+          { id: 8, cat: "Baris Campaign Asli · Turunan Boooleh TaU (Ramadan)", asli: false, benar: "A",
+            a: "Lupa lagi puasa, terus makan sampai kenyang. Boooleh TaU?",
+            b: "Apakah Diperbolehkan Makan dan Minum Saat Lupa Sedang Berpuasa? Berikut Penjelasannya",
+            why: "Versi ini mulai dari momen yang sangat relatable pas Ramadan, baru lempar pertanyaan. Format tanya kayak gini ngundang orang jawab di kepala dulu sebelum scroll lanjut." },
+          { id: 9, cat: "Baris Campaign Asli · Syne (Media Kreatif)", asli: false, benar: "B",
+            a: "Syne Adalah Media Kreatif yang Menyajikan Berbagai Konten Menarik untuk Anak Muda",
+            b: "Konten yang Nggak Cuma Lewat di Feed",
+            why: "Versi lemahnya menjelaskan dirinya sendiri. Versi ini bicara ke pembaca dan menyentil masalah yang mereka rasakan tiap hari: kebanyakan konten cuma lewat. Itu bedanya deskripsi vs posisi." },
+          { id: 10, cat: "Formula · PAS (Problem-Agitate-Solve) / Bank Nagari", asli: false, benar: "A",
+            a: "Dompet ketinggalan. HP di tangan. Untung ada Ollin.",
+            b: "Tingkatkan Kemudahan Transaksi Anda dengan Layanan Perbankan Digital Kami",
+            why: "PAS nggak harus panjang. Problem-nya dompet ketinggalan, agitasinya cuma jeda dua kalimat pendek, solusinya satu nama produk. Pembaca ngerasain dulu, baru dikasih jalan keluar." },
+          { id: 11, cat: "Formula · Before-After-Bridge / Bank Nagari", asli: false, benar: "B",
+            a: "Aplikasi Ollin Memudahkan Seluruh Transaksi Perbankan Anda dalam Satu Genggaman",
+            b: "Dulu: antre cuma buat transfer. Sekarang: transfer dari kasur. Jembatannya? Ollin.",
+            why: "Before-After-Bridge menang karena pembaca bisa ngeliat transformasinya, bukan cuma dikasih tau. Formula ini teruji di konten Bank Nagari — konten dengan struktur Before-After-Bridge dapat 445 likes, 17 comments, dan 33 shares." },
+          { id: 12, cat: "Formula · Before-After-Bridge / Disporapar Jawa Tengah", asli: false, benar: "A",
+            a: "Dulu Jateng cuma buat lewat. Sekarang Jateng buat berhenti. #JelajahJatengSekarang",
+            b: "Jawa Tengah Memiliki Banyak Destinasi Wisata Menarik yang Patut untuk Dikunjungi",
+            why: "Before-nya adalah persepsi lama, After-nya adalah persepsi baru, Bridge-nya hashtag ajakannya. Struktur ini ngubah cara orang mikir, bukan cuma ngasih info." },
+          { id: 13, cat: "Formula · AIDA (Attention) / Bank Nagari", asli: false, benar: "B",
+            a: "Selamat Datang di Layanan Digital Bank Nagari yang Modern dan Terpercaya",
+            b: "Berhenti. Cek QRIS Itu Asli atau Palsu?",
+            why: "AIDA mulai dari Attention, dan perhatian paling cepat didapat dari perintah + pertanyaan yang relevan. Versi ini bikin jempol berhenti dalam satu baris." },
+          { id: 14, cat: "Formula · AIDA (Desire) / by.U", asli: false, benar: "A",
+            a: "Kuota buat yang hidupnya nggak bisa diprediksi.",
+            b: "by.U Menawarkan Berbagai Pilihan Paket Data dengan Harga yang Kompetitif",
+            why: "Desire itu bukan soal harga, tapi identitas. Versi ini ngomong ke Gen Z yang ngerasa hidupnya spontan — paketnya jadi terasa “dibikin buat gue”." },
+          { id: 15, cat: "Formula · AIDA (Action) / Disporapar Jawa Tengah", asli: false, benar: "B",
+            a: "Untuk Informasi Lebih Lanjut, Silakan Kunjungi Website Resmi Dinas Pariwisata",
+            b: "Weekend Ini, Jangan di Rumah Aja. #JelajahJatengSekarang",
+            why: "CTA yang bagus nyebut kapan dan ngapain, bukan nyuruh klik link doang. Ada waktu spesifik (“weekend ini”) jadi ajakannya terasa sekarang, bukan kapan-kapan." },
+          { id: 16, cat: "Formula · PAS / Minang Podcast", asli: false, benar: "A",
+            a: "Ngerasa Cerita Kamu Nggak Penting? Dengerin Ini Dulu.",
+            b: "Minang Podcast Menghadirkan Episode Terbaru Setiap Minggu untuk Para Pendengar Setia",
+            why: "Problem-nya adalah rasa nggak penting itu — dalam banget. Versi ini nggak jualan episode, dia nawarin sudut pandang baru soal cerita pendengarnya sendiri." },
+          { id: 17, cat: "Formula · AIDA / Minang Podcast", asli: false, benar: "A",
+            a: "Setiap Orang Punya Cerita. Episode Ini Bukti Pertamanya.",
+            b: "Tonton Episode Terbaru Minang Podcast Bersama Narasumber Inspiratif Minggu Ini",
+            why: "Interest dibangun dari janji bukti, bukan kata “inspiratif” yang udah terlalu umum. Pembaca dikasih alasan buat membuktikan sendiri." },
+          { id: 18, cat: "Prinsip · Spesifik vs Generik / Bank Nagari", asli: false, benar: "B",
+            a: "Bank Nagari Memberikan Pelayanan Terbaik untuk Seluruh Nasabah Setia Kami",
+            b: "Transfer Jam 11 Malam? Tetap Bisa.",
+            why: "Spesifik selalu menang dari superlatif. “Jam 11 malam” adalah situasi nyata, “pelayanan terbaik” adalah klaim yang diucapkan semua bank." },
+          { id: 19, cat: "Prinsip · Spesifik vs Generik / Disporapar Jawa Tengah", asli: false, benar: "A",
+            a: "1 Provinsi, 35 Kabupaten/Kota, Nggak Habis-Habis Buat Dijelajahi.",
+            b: "Jelajahi Keindahan Alam dan Budaya Jawa Tengah yang Sangat Memukau",
+            why: "Angka dan cakupan bikin klaimnya bisa dibayangkan. Generik bilang “memukau”, spesifik nunjukin seberapa besar yang mau dijelajahi." },
+          { id: 20, cat: "Prinsip · Manusiawi vs Korporat / Bank Nagari", asli: false, benar: "B",
+            a: "Kami Berkomitmen untuk Senantiasa Meningkatkan Kualitas Layanan Perbankan Digital",
+            b: "Kami Dengar. Makanya Ollin Dibikin Lebih Simpel.",
+            why: "Bunyi manusiawi itu pendek, ngakuin ada masukan, dan nunjukin respons. Bunyi korporat panjang, aman, dan nggak bilang apa-apa." },
+          { id: 21, cat: "Prinsip · Show, Don't Tell / House of Musi", asli: false, benar: "B",
+            a: "House of Musi Adalah Coffee Shop dengan Suasana yang Sangat Nyaman dan Estetik",
+            b: "Di Sini, “Sebentar Lagi Pulang” Artinya Masih Satu Jam Lagi.",
+            why: "Show, don't tell: jangan bilang “nyaman”, tunjukin perilaku orang yang nyaman. Kalimat ini adalah buktinya, tanpa perlu klaim." },
+          { id: 22, cat: "Prinsip · Show, Don't Tell / Syne", asli: false, benar: "A",
+            a: "Di-scroll? Nggak. Dibaca Sampai Habis? Iya.",
+            b: "Konten Kami Telah Terbukti Berkualitas Tinggi dan Sangat Engaging untuk Audiens",
+            why: "Versi ini mendemonstrasikan engagement lewat format tanya-jawab pendek, bukan mengklaimnya. Pembaca ngerasain sendiri bedanya dalam dua baris." },
+          { id: 23, cat: "Prinsip · Singkat vs Bertele-tele / Disporapar Jawa Tengah", asli: false, benar: "A",
+            a: "Jateng Itu Dekat. Kamu Aja yang Belum Berangkat.",
+            b: "Pemerintah Provinsi Jawa Tengah Mengajak Seluruh Masyarakat untuk Mengunjungi dan Mempromosikan Pariwisata Daerah",
+            why: "Ajakan wisata yang efektif itu personal dan sedikit ngegas dengan cara yang akrab. Versi resmi benar, tapi nggak ada yang bergerak karena kalimat resmi." },
+          { id: 24, cat: "Prinsip · Rasa Penasaran / Minang Podcast", asli: false, benar: "B",
+            a: "Episode Kali Ini Membahas Perjalanan Hidup Seorang Narasumber yang Sangat Menginspirasi",
+            b: "Dia Mulai dari Nol. Bukan Nol yang Biasa Kamu Dengar.",
+            why: "Buka loop, jangan tutup. Frasa “bukan nol yang biasa” bikin pembaca nanya “emang nol kayak gimana?” — dan cuma bisa dijawab dengan mendengarkan." },
+          { id: 25, cat: "Prinsip · Angka Konkret / Bank Nagari", asli: false, benar: "A",
+            a: "1 Aplikasi buat Transfer, Bayar, sampai Top Up. Nggak Pindah-Pindah.",
+            b: "Banyak Nasabah Telah Merasakan Kemudahan Bertransaksi Menggunakan Aplikasi Ollin",
+            why: "“Banyak” itu nggak bisa dipegang. “1 aplikasi” untuk tiga pekerjaan konkret bisa dipegang, dihitung, dan langsung kebayang hematnya." },
+          { id: 26, cat: "Prinsip · Angka Konkret / House of Musi", asli: false, benar: "B",
+            a: "House of Musi Buka Setiap Hari dengan Jam Operasional yang Panjang untuk Kamu",
+            b: "Buka dari Pagi Sampai Kamu Bilang “Udah Malam, Pulang Yuk”.",
+            why: "Jam operasional yang ditulis pakai bahasa manusia lebih diingat daripada daftar jam. Konkret itu soal adegan, bukan selalu soal angka." },
+          { id: 27, cat: "Prinsip · Manusiawi vs Korporat / Kemenhub / Institusi", asli: false, benar: "A",
+            a: "Informasi yang Jelas, Biar Publik Nggak Perlu Nebak.",
+            b: "Kami Senantiasa Berupaya Memberikan Informasi Publik yang Transparan dan Akuntabel",
+            why: "Buat institusi, manusiawi bukan berarti santai berlebihan — cukup buang kata-kata hampa dan bicara soal manfaat nyatanya buat publik." },
+          { id: 28, cat: "Prinsip · Singkat & Berani / by.U", asli: false, benar: "B",
+            a: "Pilih Paket Data yang Sesuai dengan Kebutuhan dan Gaya Hidup Digital Kamu Sehari-Hari",
+            b: "Kuota Kamu, Aturan Kamu.",
+            why: "Empat kata, satu janji kebebasan. Headline berani itu berani memotong — yang dipotong bukan makna, tapi kata-kata yang nggak kerja." },
+          { id: 29, cat: "Prinsip · Rasa Penasaran / Bank Nagari (Edukasi Keuangan)", asli: false, benar: "B",
+            a: "Tips dan Trik Mengelola Keuangan Pribadi dengan Baik dan Benar untuk Masa Depan",
+            b: "Gaji Baru Masuk Seminggu, Kok Udah Tipis Aja?",
+            why: "Pertanyaan yang pembaca tanyain ke diri sendiri tiap bulan selalu menang dari judul “tips dan trik”. Penasaran paling kuat datang dari masalah sendiri." },
+          { id: 30, cat: "Prinsip · Spesifik vs Generik / Minang Podcast", asli: false, benar: "A",
+            a: "Tokohnya Orang Biasa. Ceritanya yang Luar Biasa.",
+            b: "Dengarkan Kisah-Kisah Menarik dari Para Tokoh Inspiratif Tanah Air di Minang Podcast",
+            why: "Kontras “orang biasa / cerita luar biasa” itu spesifik dan sejalan sama tagline Minang Podcast — setiap kita adalah tokoh. Generik cuma bilang “menarik dan inspiratif”." },
+          { id: 31, cat: "Prinsip · Manusiawi vs Korporat / House of Musi", asli: false, benar: "B",
+            a: "Kami Menyajikan Kopi dengan Biji Pilihan dan Proses Penyeduhan yang Sangat Berkualitas",
+            b: "Kopi Serius. Baristanya Nggak Serius-Serius Amat.",
+            why: "Kontras serius/nggak serius bikin brand terasa manusiawi dan approachable. Coffee shop menang di rasa akrab, bukan di klaim proses." },
+          { id: 32, cat: "Prinsip · Rasa Penasaran / House of Musi", asli: false, benar: "A",
+            a: "Menu Ini Nggak Ada di Daftar. Tanya Baristanya.",
+            b: "House of Musi Menghadirkan Menu Baru yang Wajib Kamu Coba di Bulan Ini",
+            why: "Rasa penasaran + eksklusivitas kecil. Sesuatu yang “nggak ada di daftar” terasa spesial, padahal informasinya sengaja ditahan setengah." },
+          { id: 33, cat: "Prinsip · Show, Don't Tell / Bank Nagari (Layanan)", asli: false, benar: "B",
+            a: "Layanan Kami Cepat, Mudah, Aman, dan Dapat Diandalkan Kapan Saja Kamu Butuhkan",
+            b: "Urus Bank Nggak Harus ke Bank.",
+            why: "Satu kalimat paradoks nunjukin semua klaim A sekaligus — cepat, mudah, kapan saja — tanpa nyebut satu pun kata sifatnya. Itu show, don't tell versi paling hemat." },
+          { id: 34, cat: "Prinsip · Spesifik vs Generik / Portfolio Copywriter", asli: false, benar: "A",
+            a: "Words That Work as Hard as Visuals Do.",
+            b: "Saya Adalah Copywriter Berpengalaman yang Siap Membantu Brand Anda Berkembang",
+            why: "Portfolio copywriter dinilai dari headline-nya sendiri. Versi ini adalah tagline posisi Imra — dia nggak mengklaim “berpengalaman”, dia langsung nunjukin cara dia mikir soal copy." }
+        ];
+
+        var ROUNDS = 3;
+        var SEEN_KEY = "imra-headline-quiz-seen";
+        var body = document.getElementById("quizBody");
+        var roundEl = document.getElementById("quizRound");
+        var scoreEl = document.getElementById("quizScore");
+        if (!body) return;
+
+        function loadSeen() {
+          try {
+            var raw = window.localStorage.getItem(SEEN_KEY);
+            var arr = raw ? JSON.parse(raw) : [];
+            return Array.isArray(arr) ? arr : [];
+          } catch (e) { return []; }
+        }
+        function saveSeen(seen) {
+          try { window.localStorage.setItem(SEEN_KEY, JSON.stringify(seen)); } catch (e) {}
+        }
+        function shuffle(arr) {
+          var a = arr.slice();
+          for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var t = a[i]; a[i] = a[j]; a[j] = t;
+          }
+          return a;
+        }
+        function pickRounds() {
+          var seen = loadSeen();
+          var pool = BANK.filter(function (q) { return seen.indexOf(q.id) === -1; });
+          if (pool.length < ROUNDS) { seen = []; saveSeen(seen); pool = BANK.slice(); }
+          return shuffle(pool).slice(0, ROUNDS);
+        }
+        function markSeen(id) {
+          var seen = loadSeen();
+          if (seen.indexOf(id) === -1) { seen.push(id); saveSeen(seen); }
+        }
+        function el(tag, cls, text) {
+          var n = document.createElement(tag);
+          if (cls) n.className = cls;
+          if (text != null) n.textContent = text;
+          return n;
+        }
+
+        var rounds = [];
+        var idx = 0;
+        var score = 0;
+
+        function updateStatus(done) {
+          roundEl.textContent = done ? "Selesai" : "Ronde " + (idx + 1) + " / " + ROUNDS;
+          scoreEl.textContent = "Skor " + score + " / " + ROUNDS;
+        }
+
+        function renderRound() {
+          updateStatus(false);
+          body.innerHTML = "";
+          var q = rounds[idx];
+
+          var meta = el("div", "quiz-meta");
+          meta.appendChild(el("span", "quiz-cat", q.cat));
+          var src = el("span", "quiz-src" + (q.asli ? " asli" : ""), q.asli ? "Asli" : "Contoh");
+          meta.appendChild(src);
+          body.appendChild(meta);
+
+          // Acak urutan opsi saat tampil — posisi jawaban benar tidak mengikuti dokumen.
+          var order = Math.random() < 0.5 ? ["a", "b"] : ["b", "a"];
+          var letters = ["A", "B"];
+          var opts = el("div", "quiz-opts");
+          var buttons = [];
+          order.forEach(function (key, i) {
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "qopt";
+            btn.setAttribute("aria-label", "Pilihan " + letters[i] + ": " + q[key]);
+            var letter = el("span", "qletter", letters[i]);
+            var text = el("span", "qtext", q[key]);
+            btn.appendChild(letter);
+            btn.appendChild(text);
+            btn.addEventListener("click", function () { answer(q, key, btn, buttons); });
+            buttons.push({ btn: btn, key: key });
+            opts.appendChild(btn);
+          });
+          body.appendChild(opts);
+
+          var why = el("div", "quiz-why");
+          why.hidden = true;
+          why.setAttribute("aria-live", "polite");
+          body.appendChild(why);
+          body._why = why;
+        }
+
+        function answer(q, pickedKey, pickedBtn, buttons) {
+          var correctKey = q.benar.toLowerCase();
+          var isRight = pickedKey === correctKey;
+          if (isRight) score++;
+          markSeen(q.id);
+          updateStatus(false);
+
+          buttons.forEach(function (item) {
+            item.btn.disabled = true;
+            if (item.key === correctKey) item.btn.classList.add("correct");
+            else if (item.btn === pickedBtn) item.btn.classList.add("wrong");
+            else item.btn.classList.add("dim");
+          });
+
+          var why = body._why;
+          why.innerHTML = "";
+          var verdict = el("p", "quiz-verdict" + (isRight ? " ok" : ""),
+            isRight ? "Betul — itu headline yang menang." : "Belum tepat — yang menang yang berwarna hijau.");
+          why.appendChild(verdict);
+          why.appendChild(el("p", null, q.why));
+          var next = document.createElement("button");
+          next.type = "button";
+          next.className = "btn quiz-next";
+          next.textContent = idx < ROUNDS - 1 ? "Ronde berikutnya" : "Lihat skor akhir";
+          next.addEventListener("click", function () {
+            idx++;
+            if (idx < ROUNDS) renderRound(); else renderFinal();
+          });
+          why.appendChild(next);
+          why.hidden = false;
+          next.focus();
+        }
+
+        function renderFinal() {
+          updateStatus(true);
+          body.innerHTML = "";
+          var fin = el("div", "quiz-final");
+          var big = el("p", "quiz-score-big");
+          big.appendChild(el("small", null, "Skor akhir lo"));
+          big.appendChild(document.createTextNode(score + " / " + ROUNDS));
+          fin.appendChild(big);
+          var msgs = {
+            3: "Tiga dari tiga. Insting headline lo tajam — lo tau bedanya copy yang kerja dan copy yang cuma bunyi resmi.",
+            2: "Dua dari tiga. Insting lo udah di jalur yang benar — yang satu lagi memang sengaja dibikin mirip.",
+            1: "Satu dari tiga. Wajar — yang menang di kuis ini memang sering bukan yang paling panjang atau paling resmi.",
+            0: "Nol dari tiga — dan itu justru poinnya: headline yang menang jarang yang paling aman. Coba lagi, soalnya baru."
+          };
+          fin.appendChild(el("p", "quiz-final-msg", msgs[score]));
+          fin.appendChild(el("p", "quiz-cta-q", "Mau headline kayak gini buat brand lo?"));
+          var actions = el("div", "quiz-final-actions");
+          var cta = document.createElement("a");
+          cta.className = "btn";
+          cta.href = "#contact";
+          cta.textContent = "Hubungi gue";
+          actions.appendChild(cta);
+          var again = document.createElement("button");
+          again.type = "button";
+          again.className = "btn black";
+          again.textContent = "Main lagi — soal baru";
+          again.addEventListener("click", start);
+          actions.appendChild(again);
+          fin.appendChild(actions);
+          body.appendChild(fin);
+        }
+
+        function start() {
+          rounds = pickRounds();
+          idx = 0;
+          score = 0;
+          renderRound();
+        }
+
+        start();
       })();
     </script>
   </body>
